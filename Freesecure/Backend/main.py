@@ -42,6 +42,13 @@ try:
         for light in lights:
             light.on = True
             light.brightness = 254
+    elif args[1] == "-alloff":
+        b = Bridge("172.31.255.156")
+        b.connect()
+        lights = b.lights
+        for light in lights:
+            light.on = False
+            light.brightness = 0
     elif args[1] == "-huecheck":
         try:
             b = Bridge("172.31.255.156")
