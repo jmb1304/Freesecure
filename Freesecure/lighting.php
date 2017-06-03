@@ -31,6 +31,13 @@
         </div><!--/.nav-collapse -->
     </div>
 </nav>
+<div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4"><form action=\"set_light.php\" method=\"get\"><input type=\"hidden\" name=\"light\" value=\"\">
+            <input type=\"hidden\" name=\"state\" value=\"2\"><input type=\"submit\" value=\"All On\" class=\"btn btn-primary\"></form></div>
+    <div class="col-sm-4"><form action=\"set_light.php\" method=\"get\"><input type=\"hidden\" name=\"light\" value=\"\">
+            <input type=\"hidden\" name=\"state\" value=\"3\"><input type=\"submit\" value=\"All Off\" class=\"btn btn-primary\"></form></div>
+</div>
 <?php
 $output = exec('python3 Backend/main.py -check');
 if ($output == "ok"){

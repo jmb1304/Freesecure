@@ -35,6 +35,13 @@ try:
         f.close()
         print("Hub IP Address set!")
         print("Now run -huecheck to make sure everything is working!")
+    elif args[1] == "-allon":
+        b = Bridge("172.31.255.156")
+        b.connect()
+        lights = b.lights
+        for light in lights:
+            light.on = True
+            light.brightness = 254
     elif args[1] == "-huecheck":
         try:
             b = Bridge("172.31.255.156")

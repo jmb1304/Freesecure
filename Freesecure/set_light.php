@@ -8,5 +8,11 @@ if($state == "1"){
 if($state == "0"){
     $output = exec('python3 Backend/main.py -setlightoff ' . $light);
 }
+if($state == "2"){
+    $output = exec('python3 Backend/main.py -allon');
+}
+if($state == "3"){
+    $output = exec('python3 Backend/main.py -alloff');
+}
 exit();
 ?>
