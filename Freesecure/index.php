@@ -55,7 +55,7 @@
             <script>
                 window.setInterval(function(){
                     $("#status").load(location.href + " #status");
-                }, 1000);
+                }, 3000);
 
             </script>
         </div>
